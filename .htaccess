@@ -1,0 +1,11 @@
+<FilesMatch "\.(txt)$">
+Header set Cache-Control "max-age=0"
+</FilesMatch>
+
+<IfModule mod_headers.c>    
+    Header set Access-Control-Allow-Origin *
+</IfModule>
+
+php_value max_execution_time 100000
+php_value default_charset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml
